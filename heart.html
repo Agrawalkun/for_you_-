@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qwigley&family=Special+Elite&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url(https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?cs=srgb&dl=pexels-francesco-ungaro-998641.jpg&fm=jpg);
+            /* background-color: black; */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+
+        }
+
+        .heart {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            margin: 200px auto;
+
+            box-shadow: -10px 10px 90px #ff0000;
+
+            animation: beat 1s infinite alternate ;
+            /* animation: high 1s linear forwards; */
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: -10px -10px 90px #ff0000;
+
+
+        }
+
+        .heart:after {
+            top: 0px;
+            right: 149px;
+        }
+
+        .heart:before {
+            top: -149px;
+            left: 0px;
+        }
+
+        .text {
+            /* border: 2px solid black; */
+            width: 1109px;
+            height: 146px;
+            position: relative;
+            bottom: 146px;
+            left: 205px;
+        }
+
+        .heading {
+            text-align: center;
+            font-family: 'Special Elite', serif;
+            font-size: 65px;
+            font-weight: bold;
+            margin-top: 0px;
+            word-spacing: -28px;
+            letter-spacing: 5px;
+            margin-bottom: 0px;
+            position: relative;
+        }
+
+        .babe {
+            font-family: 'Qwigley', serif;
+            font-size: 95px;
+            font-weight: bold;
+            font-style: italic;
+
+        }
+
+        .set {
+            pointer-events: none;
+        }
+
+        .set div {
+            position: absolute;
+            display: block;
+        }
+
+        .set div:nth-child(1) {
+            left: 80px;
+            animation: animate 7s linear infinite;
+            animation-delay: -28s;
+            filter: blur(2px);
+        }
+
+        .set div:nth-child(2) {
+            left: 20%;
+            animation: animate 9s linear infinite;
+            animation-delay: -25s;
+        }
+
+        .set div:nth-child(3) {
+            left: 150px;
+            animation: animate 9s linear infinite;
+            animation-delay: -21s;
+            filter: blur(2px);
+        }
+
+        .set div:nth-child(4) {
+            left: 270px;
+            animation: animate 11s linear infinite;
+            animation-delay: -19s;
+        }
+
+        .set div:nth-child(5) {
+            left: 500px;
+            animation: animate 14s linear infinite;
+            animation-delay: -14s;
+            filter: blur(1px);
+        }
+
+        .set div:nth-child(6) {
+            left: 0%;
+            animation: animate 7s linear infinite;
+            animation-delay: -8s;
+        }
+
+        .set div:nth-child(7) {
+            left: 620px;
+            animation: animate 7s linear infinite;
+            animation-delay: -28s;
+            filter: blur(1px);
+        }
+
+        .set div:nth-child(8) {
+            left: 720px;
+            animation: animate 9s linear infinite;
+            animation-delay: -28s;
+        }
+
+        .set div:nth-child(9) {
+            left: 920px;
+            animation: animate 11s linear infinite;
+            animation-delay: -28s;
+            filter: blur(2px);
+        }
+
+        .set div:nth-child(10) {
+            left: 820px;
+            animation: animate 14s linear infinite;
+            animation-delay: -28s;
+            filter: blur(3px);
+        }
+
+        .set div:nth-child(11) {
+            left: 570px;
+            animation: animate 7s linear infinite;
+            animation-delay: -28s;
+        }
+
+        .set div:nth-child(12) {
+            left: 1320px;
+            animation: animate 9s linear infinite;
+            animation-delay: -28s;
+            filter: blur(1px);
+        }
+
+        .set div:nth-child(13) {
+            left: 1020px;
+            animation: animate 11s linear infinite;
+            animation-delay: -28s;
+        }
+
+        .set div:nth-child(14) {
+            left: 190px;
+            animation: animate 14s linear infinite;
+            animation-delay: -28s;
+            filter: blur(1px);
+        }
+
+        .set div:nth-child(15) {
+            left: 1320px;
+            animation: animate 7s linear infinite;
+            animation-delay: -7s;
+        }
+
+        .set div:nth-child(16) {
+            left: 1200px;
+            animation: animate 9s linear infinite;
+            animation-delay: -28s;
+        }
+
+        .set div:nth-child(17) {
+            left: 1120px;
+            animation: animate 11s linear infinite;
+            animation-delay: -18s;
+            filter: blur(3px);
+        }
+
+        .set div:nth-child(18) {
+            left: 170px;
+            animation: animate 14s linear infinite;
+            animation-delay: -20s;
+            filter: blur(1px);
+        }
+
+        .set div:nth-child(19) {
+            left: 1020px;
+            animation: animate 7s linear infinite;
+            animation-delay: -16s;
+            filter: blur(2px);
+        }
+
+        .set div:nth-child(20) {
+            left: 1270px;
+            animation: animate 7s linear infinite;
+            animation-delay: -10s;
+        }
+
+        .img {
+            height: 50px;
+            width: 50px;
+            filter: blur(1);
+        }
+
+        .img2 {
+            height: 50px;
+            width: 50px;
+        }
+
+        .img3 {
+            height: 80px;
+            width: 80px;
+        }
+
+        @keyframes animate {
+            0% {
+                opacity: 0;
+                top: -10px;
+                transform: translateX(20px)rotate(0deg);
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            20% {
+                transform: translateX(-20px)rotate(45deg);
+            }
+
+            40% {
+                transform: translateX(-20px)rotate(90deg);
+            }
+
+            60% {
+                transform: translateX(-20px)rotate(180deg);
+            }
+
+            80% {
+                transform: translateX(-20px)rotate(180deg);
+            }
+
+            100% {
+                top: 900px;
+                transform: translateX(-20px)rotate(180deg);
+            }
+        }
+
+        .just {
+            display: inline-block;
+            width: 166px;
+            height: 57px;
+            margin: 0px;
+            /* background-color: goldenrod; */
+            color: goldenrod;
+        }
+
+        .change {
+            display: inline-block;
+            width: 200px;
+            height: 82px;
+            margin: 0px;
+            /* background-color: goldenrod; */
+            color: red;
+        }
+
+        h1 span {
+            animation: high 1s linear forwards;
+            opacity: 0;
+            display: inline-block;
+
+        }
+
+        @keyframes high {
+            0% {
+                opacity: 0;
+                transform: rotateY(-90deg);
+                filter: blur(10px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: rotateY(0deg);
+                filter: blur(0px);
+            }
+        }
+
+
+        @keyframes beat {
+            0% {
+               
+                transform: scale(1)rotate(45deg);
+                filter: blur(1px);
+
+            }
+
+            100% {
+               
+                transform: scale(1.1)rotate(45deg);
+                filter: blur(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heart">
+
+    </div>
+
+    <div class="text">
+        <h1 class="heading">
+            <span class="just">Just</span>
+            <span class="just">for</span>
+            <span class="just">you</span>
+            <span class="babe change">Babe</span>
+            <span class="babe"> 😉✨</span>
+        </h1>
+    </div>
+    <div class="set">
+        <div><img src="/star1-removebg-preview.png" alt="" class="img"></div>
+        <div><img src="/star5-removebg-preview.png" alt="" class="img3"></div>
+        <!-- <div><img src="/" alt="" class="img2"></div> -->
+        <div><img src="/star1-removebg-preview.png" alt="" class="img2"></div>
+        <div><img src="/star5-removebg-preview.png" alt="" class="img3"></div>
+        <div><img src="/star5-removebg-preview.png" alt="" class="img3"></div>
+        <!-- <div><img src="/" alt=""></div> -->
+        <div><img src="/star1-removebg-preview.png" alt="" class="img"></div>
+        <div><img src="/star5-removebg-preview.png" alt="" class="img3"></div>
+        <!-- <div><img src="/" alt=""></div> -->
+        <div><img src="/star1-removebg-preview.png" alt="" class="img2"></div>
+        <div><img src="/star5-removebg-preview.png" alt="" class="img3"></div>
+        <div><img src="/star5-removebg-preview.png" alt="" class="img3"></div>
+        <!-- <div><img src="/" alt=""></div> -->
+        <div><img src="/star1-removebg-preview.png" alt="" class="img"></div>
+        <div><img src="/star5-removebg-preview.png" alt="" class="img3"></div>
+
+        <div><img src="/star1-removebg-preview.png" alt="" class="img2"></div>
+        <div><img src="/star5-removebg-preview.png" alt="" class="img3"></div>
+        <div><img src="/star5-removebg-preview.png" alt="" class="img3"></div>
+
+        <div><img src="/star1-removebg-preview.png" alt="" class="img"></div>
+        <div><img src="/star1-removebg-preview.png" alt="" class="img"></div>
+        <div><img src="/star1-removebg-preview.png" alt="" class="img"></div>
+        <div><img src="/star1-removebg-preview.png" alt="" class="img"></div>
+        <div><img src="/star1-removebg-preview.png" alt="" class="img"></div>
+    </div>
+</body>
+
+</html>
